@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配移动端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传感器技术 - 精品课程网站</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 页面主体样式 */
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 导航栏样式 */
+        header {
+            background-color: #165DFF;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #cce5ff;
+        }
+
+        /* 横幅区域 */
+        .banner {
+            background: linear-gradient(rgba(22,93,255,0.8), rgba(22,93,255,0.9)), url('https://picsum.photos/id/180/1920/600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .banner h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .banner p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 通用板块样式 */
+        .section {
+            padding: 4rem 0;
+            background: white;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #165DFF;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background: #165DFF;
+            display: block;
+            margin: 0.5rem auto;
+        }
+
+        /* 网格布局 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* 卡片样式 */
+        .card {
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #165DFF;
+        }
+
+        .card h3 {
+            color: #165DFF;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* 列表样式 */
+        .list {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .list li {
+            margin: 0.8rem 0;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #165DFF;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container nav-bar">
+            <div class="logo">传感器技术课程</div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">课程介绍</a></li>
+                    <li><a href="#type">传感器分类</a></li>
+                    <li><a href="#apply">应用领域</a></li>
+                    <li><a href="#study">学习资源</a></li>
+                    <li><a href="#experiment">实验指导</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 横幅 -->
+    <div class="banner">
+        <div class="container">
+            <h1>传感器技术</h1>
+            <p>感知物理世界，连接智能未来 —— 从基础原理到工程应用的全方位学习平台</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 课程介绍 -->
+        <section class="section" id="intro">
+            <h2 class="section-title">课程介绍</h2>
+            <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem;">
+                <p>《传感器技术》是电子信息工程、自动化、物联网工程、测控技术与仪器等专业的核心专业课程，是连接物理世界与数字系统的桥梁。</p>
+                <br>
+                <p><strong>课程目标：</strong>掌握各类常用传感器的工作原理、结构特性、性能指标、测量电路及工程应用方法，具备传感器选型、调试、数据采集与系统设计的实践能力。</p>
+                <br>
+                <p><strong>先修课程：</strong>电路分析、模拟电子技术、数字电子技术、单片机原理</p>
+            </div>
+        </section>
+
+        <!-- 传感器分类 -->
+        <section class="section" id="type">
+            <h2 class="section-title">常用传感器分类</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>温度传感器</h3>
+                    <p>检测温度信号，代表器件：热电偶、热敏电阻、DS18B20、红外测温传感器</p>
+                </div>
+                <div class="card">
+                    <h3>压力传感器</h3>
+                    <p>测量压力、压强，应用于工业控制、液压系统、医疗设备</p>
+                </div>
+                <div class="card">
+                    <h3>位移/距离传感器</h3>
+                    <p>超声波传感器、红外测距、激光传感器、霍尔传感器</p>
+                </div>
+                <div class="card">
+                    <h3>气体传感器</h3>
+                    <p>MQ系列传感器，检测甲烷、一氧化碳、酒精、空气质量等</p>
+                </div>
+                <div class="card">
+                    <h3>光学传感器</h3>
+                    <p>光敏电阻、光电二极管、CCD图像传感器、光纤传感器</p>
+                </div>
+                <div class="card">
+                    <h3>惯性传感器</h3>
+                    <p>加速度计、陀螺仪、姿态传感器，广泛用于无人机、机器人、手机</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 应用领域 -->
+        <section class="section" id="apply">
+            <h2 class="section-title">传感器应用领域</h2>
+            <ul class="list">
+                <li><strong>工业自动化：</strong>生产过程监测、机械控制、环境监控</li>
+                <li><strong>智能家居：</strong>温湿度监测、人体感应、燃气报警、智能照明</li>
+                <li><strong>物联网(IoT)：</strong>智慧农业、智慧物流、环境监测、智慧城市</li>
+                <li><strong>医疗健康：</strong>心率监测、血压传感器、体温检测、医疗影像设备</li>
+                <li><strong>汽车电子：</strong>胎压监测、碰撞检测、车速传感器、自动驾驶雷达</li>
+                <li><strong>航空航天：</strong>姿态控制、环境探测、卫星遥感、故障诊断</li>
+            </ul>
+        </section>
+
+        <!-- 学习资源 -->
+        <section class="section" id="study">
+            <h2 class="section-title">学习资源</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>参考教材</h3>
+                    <p>《传感器原理及应用》《现代传感器技术》《智能传感器系统设计》</p>
+                </div>
+                <div class="card">
+                    <h3>在线课程</h3>
+                    <p>中国大学MOOC、学堂在线、B站公开课、单片机/传感器实战教程</p>
+                </div>
+                <div class="card">
+                    <h3>工具软件</h3>
+                    <p>Proteus仿真、Altium Designer、Keil、Arduino IDE、LabVIEW</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 实验指导 -->
+        <section class="section" id="experiment">
+            <h2 class="section-title">课程实验指导</h2>
+            <ul class="list">
+                <li>实验1：温度传感器特性测试与数据采集</li>
+                <li>实验2：光敏电阻/红外传感器应用实验</li>
+                <li>实验3：气体传感器电路设计与调试</li>
+                <li>实验4：超声波测距系统设计</li>
+                <li>实验5：多传感器融合与物联网数据上传</li>
+                <li>实验6：综合设计：环境监测小系统</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>传感器技术课程学习网页 © 2025 | 适用于教学、学习、课程设计</p>
+        </div>
+    </footer>
+</body>
+</html>
